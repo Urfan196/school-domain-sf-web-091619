@@ -8,7 +8,8 @@ def initialize(name)
 end
 
 def add_student(name, grade)
-      @roster[grade] = name
+      @roster[grade] ||= []
+      @roster[grade] << name
 end
 
 def grade(grade)
